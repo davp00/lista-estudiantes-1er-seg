@@ -1,0 +1,48 @@
+.back-img
+{
+    background-size: cover;
+    background-image: url("../img/fondo.JPG");
+}
+
+.margin-top
+{
+    margin-top: 10%;
+}
+
+.margin-bottom
+{
+    margin-bottom: 10%;
+}
+
+
+.asistio
+{
+    border: #4caf50 1px solid;
+}
+
+.fallo
+{
+    border: 1px solid #f44336;
+}
+
+.estudiante
+{
+
+}
+
+#tipo
+{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+#txt-fecha
+{
+    display: none;
+}
+
+.icon-margin
+{
+    color: #0a6ebd;
+    margin-right: 5px;
+}

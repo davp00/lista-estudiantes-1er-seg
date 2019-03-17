@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Meta Section-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta autor="Daniel Viloria Perez" content="Proyecto primer seguimiento">
+
+
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href="img/icon.png">
+
+    <!--Estilos de la pagina-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/material-kit.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <!--Scripts principales-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-material-design.min.js"></script>
+</head>
+<body>
+    <div class="page-header header-filter back-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                    <div class="card card-login">
+                        <h4 class="card-title text-center">Bienvenido</h4>
+                        <div class="card-body">
+                            <form id="form-login">
+                                <div class="input-group" id="email">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                    <input id="input-email" type="email" class="form-control" placeholder="Correo" name="email" autocomplete="off" required>
+
+                                    <span class="form-control-feedback" id="respuesta-email"></span>
+                                </div>
+
+                                <div class="input-group" id="pass">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </div>
+                                    <input  type="password" class="form-control" placeholder="Contraseña" name="pass" autocomplete="off" required>
+                                    <span class="form-control-feedback" id="respuesta-pass"></span>
+                                </div>
+
+                                <div class="alert alert-danger margin-top" style="display: none;" id="alert-form">
+                                    <div class="container">
+                                        <div class="alert-icon"><i class="fas fa-exclamation-circle"></i></div>
+                                        <span id="text-alert"></span>
+                                    </div>
+                                </div>
+
+                                <div class="footer text-center margin-bottom margin-top">
+                                    <button type="submit" class="btn btn-success">Iniciar</button>
+                                </div>
+
+                                <p class="description text-center">correo: admin@gmail.com <br>Pass:123</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

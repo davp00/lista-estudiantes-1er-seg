@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Meta Section-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta autor="Daniel Viloria Perez" content="Proyecto primer seguimiento">
+
+
+    <title>Lista de estudiantes</title>
+    <link rel="icon" href="img/icon.png">
+    <!--Estilos de la pagina-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/material-kit-2.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <!--Scripts principales-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap-material-design.min.js"></script>
+    <script src="js/material-kit.js"></script>
+
+    <script src="js/lista_estudiantes.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="100">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="asistencia.html">
+                    Lista de estudiantes </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="user_name" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Profesor
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fas fa-cog icon-margin"></i> <span class="text-center">Configuracion</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a onclick="localStorage.clear()" class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt icon-margin"></i>Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Reloj de la pagina-->
+    <div class="page-header header-filter back-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="brand text-center" id="txt-fecha">
+                        <h1>
+                            <span id="horas"></span> :
+                            <span id="minutos"></span> :
+                            <span id="segundos"></span>
+                            <span id="tipo" ></span>
+                        </h1>
+                        <h3 class="title text-center"><strong id="dia"></strong></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Lista de estudiantes-->
+    <div class="main main-raised ">
+        <div class="container" >
+            <div class="row" id="lista">
+            </div>
+            <div class="margin-top">
+                <button class="btn btn-success" id="btn_asistencia">Registrar Asistencia</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Mensaje Modal-->
+    <div id="mensaje" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mensaje-titulo">Mensaje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="mensaje-cuerpo">
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#user_name').text("Profesor "+localStorage.getItem('nombre'));
+        $('#txt-fecha').show('clip',1000);
+    </script>
+    <script src="js/reloj.js"></script>
+</body>
+</html>
